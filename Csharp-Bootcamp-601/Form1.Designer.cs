@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCustomerCity = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtCustomerBalance = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtShoppingTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -116,12 +116,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Müşteri Şehir";
             // 
-            // txtPrice
+            // txtCustomerBalance
             // 
-            this.txtPrice.Location = new System.Drawing.Point(106, 149);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(122, 20);
-            this.txtPrice.TabIndex = 9;
+            this.txtCustomerBalance.Location = new System.Drawing.Point(106, 149);
+            this.txtCustomerBalance.Name = "txtCustomerBalance";
+            this.txtCustomerBalance.Size = new System.Drawing.Size(122, 20);
+            this.txtCustomerBalance.TabIndex = 9;
             // 
             // label5
             // 
@@ -214,7 +214,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtShoppingTotal);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtCustomerBalance);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCustomerCity);
             this.Controls.Add(this.label4);
@@ -242,7 +242,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCustomerCity;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtCustomerBalance;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtShoppingTotal;
         private System.Windows.Forms.Label label6;
