@@ -179,6 +179,7 @@
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
