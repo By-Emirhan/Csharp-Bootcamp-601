@@ -34,5 +34,41 @@ namespace Csharp_Bootcamp_601
             customerOperations.AddCustomer(customer);
             MessageBox.Show("Müşteri Ekleme İşlemi Başarılı...");
         }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            List<Customer> customers = customerOperations.GetAllCustomers();
+            dataGridView1.DataSource = customers;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string customerId = txtID.Text;
+            customerOperations.DeleteCustomer(customerId);
+            MessageBox.Show("Müşteri başarıyla silindi");
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string id = txtID.Text;
+            var updateCustomer = new Customer()
+            {
+                customerName = txtCustomerName.Text,
+                customerBalance = decimal.Parse(txtCustomerBalance.Text),
+                customerCity = txtCustomerCity.Text,
+                customerShoppingTotal = int.Parse(txtShoppingTotal.Text),
+                customerSurname = txtCustomerSurname.Text,
+                customerID = id
+            };
+            customerOperations.UpdateCustomer(updateCustomer);
+            MessageBox.Show("Müşteri başarıyla güncellendi");
+        }
+
+        private void btnGetByID_Click(object sender, EventArgs e)
+        {
+            string id = txtID.Text;
+            Customer customers = customerOperations.GetCustomerById(id);
+            dataGridView1.DataSource = new List<Customer> { customers };
+        }
     }
 }

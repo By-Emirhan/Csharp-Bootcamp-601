@@ -45,6 +45,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnGetByID = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,6 +169,7 @@
             this.btnList.TabIndex = 13;
             this.btnList.Text = "Listele";
             this.btnList.UseVisualStyleBackColor = false;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnAdd
             // 
@@ -191,6 +193,7 @@
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -202,12 +205,26 @@
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnGetByID
+            // 
+            this.btnGetByID.BackColor = System.Drawing.Color.Tomato;
+            this.btnGetByID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGetByID.Location = new System.Drawing.Point(54, 349);
+            this.btnGetByID.Name = "btnGetByID";
+            this.btnGetByID.Size = new System.Drawing.Size(174, 27);
+            this.btnGetByID.TabIndex = 17;
+            this.btnGetByID.Text = "ID\'ye Göre Getir";
+            this.btnGetByID.UseVisualStyleBackColor = false;
+            this.btnGetByID.Click += new System.EventHandler(this.btnGetByID_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 356);
+            this.ClientSize = new System.Drawing.Size(800, 383);
+            this.Controls.Add(this.btnGetByID);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -252,6 +269,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnGetByID;
     }
 }
 
