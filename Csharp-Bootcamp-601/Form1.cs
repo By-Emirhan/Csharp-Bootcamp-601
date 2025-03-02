@@ -34,6 +34,12 @@ namespace Csharp_Bootcamp_601
             customerOperations.AddCustomer(customer);
             List<Customer> customers = customerOperations.GetAllCustomers();
             dataGridView1.DataSource = customers;
+            txtID.Text = "";
+            txtCustomerName.Text = "";
+            txtCustomerSurname.Text = "";
+            txtCustomerCity.Text = "";
+            txtCustomerBalance.Text = "";
+            txtShoppingTotal.Text = "";
             MessageBox.Show("Müşteri Ekleme İşlemi Başarılı...");
         }
 
@@ -47,6 +53,9 @@ namespace Csharp_Bootcamp_601
         {
             string customerId = txtID.Text;
             customerOperations.DeleteCustomer(customerId);
+            List<Customer> customers = customerOperations.GetAllCustomers();
+            dataGridView1.DataSource = customers;
+            txtID.Text = "";
             MessageBox.Show("Müşteri başarıyla silindi");
         }
 
@@ -73,6 +82,7 @@ namespace Csharp_Bootcamp_601
             string id = txtID.Text;
             Customer customers = customerOperations.GetCustomerById(id);
             dataGridView1.DataSource = new List<Customer> { customers };
+            txtID.Text = "";
         }
     }
 }

@@ -76,12 +76,12 @@ namespace Csharp_Bootcamp_601.Services
             var result = customerCollection.Find(filter).FirstOrDefault();
             return new Customer
             {
-                customerBalance = decimal.Parse(result["CustomerBalance"].ToString()),
-                customerCity = result["CustomerCity"].ToString(),
                 customerID = id,
-                customerName = result["CustomerName"].ToString(),
-                customerShoppingTotal = int.Parse(result["CustomerShoppingCount"].ToString()),
-                customerSurname = result["CustomerSurname"].ToString()
+                customerName = result["customerName"].ToString(),
+                customerSurname = result["customerSurname"].ToString(),
+                customerCity = result["customerCity"].ToString(),
+                customerBalance = int.Parse(result["customerBalance"].ToString()),
+                customerShoppingTotal = int.Parse(result["customerShoppingTotal"].ToString())
             };
         }
     }
