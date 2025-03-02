@@ -32,6 +32,8 @@ namespace Csharp_Bootcamp_601
             };
 
             customerOperations.AddCustomer(customer);
+            List<Customer> customers = customerOperations.GetAllCustomers();
+            dataGridView1.DataSource = customers;
             MessageBox.Show("Müşteri Ekleme İşlemi Başarılı...");
         }
 
@@ -61,6 +63,8 @@ namespace Csharp_Bootcamp_601
                 customerID = id
             };
             customerOperations.UpdateCustomer(updateCustomer);
+            List<Customer> customers = customerOperations.GetAllCustomers();
+            dataGridView1.DataSource = customers;
             MessageBox.Show("Müşteri başarıyla güncellendi");
         }
 

@@ -61,11 +61,11 @@ namespace Csharp_Bootcamp_601.Services
             var customerCollection = connection.GetCustomersCollection();
             var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(customer.customerID));
             var updatedValue = Builders<BsonDocument>.Update
-                .Set("CustomerName", customer.customerName)
-                .Set("CustomerSurname", customer.customerSurname)
-                .Set("CustomerCity", customer.customerCity)
-                .Set("CustomerBalance", customer.customerBalance)
-                .Set("CustomerShoppingCount", customer.customerShoppingTotal);
+                .Set("customerName", customer.customerName)
+                .Set("customerSurname", customer.customerSurname)
+                .Set("customerCity", customer.customerCity)
+                .Set("customerBalance", customer.customerBalance)
+                .Set("customerShoppingTotal", customer.customerShoppingTotal);
             customerCollection.UpdateOne(filter, updatedValue);
         }
         public Customer GetCustomerById(string id)
